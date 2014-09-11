@@ -64,3 +64,10 @@ Warranty/License
 There's no warranty of any kind. If you find a bug, please report it or submit a pull request with a fix. It's provided completely as-is; if something breaks, you lose data, or something else bad happens, the author(s) and owner(s) of this add-on are in no way responsible.
 
 This add-on is owned by [Vector Media Group, Inc](http://www.vectormediagroup.com). You can modify it and use it for your own personal or commercial projects, but you can't redistribute it.
+
+Roadmap
+---------
+Feature requests welcome, and pull requests are even better ;)
+* If using the [Assets Module](http://devot-ee.com/add-ons/assets) upon completion of a uploading object, run a re-index on Assets so that file will be visible from the Assets module
+* Upload to a particular folder on S3 or upload to a folder destination that is created on the fly
+* If the file already exists on S3 and an upload is attempted, some kind of notice that the file already exists
