@@ -44,12 +44,12 @@ Usage
 * Example config file
 ```
 //VMG S3 Direct Upload Settings
-$config['bucket_name']          = "super-cool-bucket";
-$config['s3_access_key_id']     = "S3AccessKeyId";
-$config['s3_access_key_secret'] = "S3AccessSecretHash";
+$config['vmg_s3_bucket_name']       = "super-cool-bucket";
+$config['vmg_s3_access_key_id']     = "S3AccessKeyId";
+$config['vmg_s3_access_key_secret'] = "S3AccessSecretHash";
 //not required config items
-$config['acl']                  = "private";
-$config['storage_class']        = "STANDARD";
+$config['vmg_s3_acl']                  = "private";
+$config['vmg_s3_storage_class']        = "STANDARD";
 ```
 
 Compatibility

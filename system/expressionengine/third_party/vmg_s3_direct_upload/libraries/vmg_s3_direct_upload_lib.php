@@ -4,12 +4,12 @@ class Vmg_s3_direct_upload_lib
 {
     public function __construct()
     {
-        $this->bucket_name      = ee()->config->item('s3_bucket_name');
-        $this->access_secret    = ee()->config->item('s3_access_key_secret');
-        $this->access_key       = ee()->config->item('s3_access_key_id');
+        $this->bucket_name      = ee()->config->item('vmg_s3_bucket_name');
+        $this->access_secret    = ee()->config->item('vmg_s3_access_key_secret');
+        $this->access_key       = ee()->config->item('vmg_s3_access_key_id');
         //config items that are not required
-        $this->acl              = ee()->config->item('s3_acl') ? ee()->config->item('s3_acl') : 'public-read';
-        $this->storage_class    = ee()->config->item('s3_storage_class') ? ee()->config->item('s3_storage_class') : 'STANDARD';
+        $this->acl              = ee()->config->item('vmg_s3_acl') ? ee()->config->item('vmg_s3_acl') : 'public-read';
+        $this->storage_class    = ee()->config->item('vmg_s3_storage_class') ? ee()->config->item('vmg_s3_storage_class') : 'STANDARD';
 
         //create the signature
         $this->signature = $this->policy_signature($this->policy_generator());
