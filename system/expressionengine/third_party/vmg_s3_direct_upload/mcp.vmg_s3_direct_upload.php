@@ -59,8 +59,7 @@ class Vmg_s3_direct_upload_mcp {
      */
     public function index()
     {
-        $this->EE->cp->set_variable('cp_page_title',
-            lang('vmg_s3_direct_upload_module_name'));
+        $this->EE->view->cp_page_title = lang('vmg_s3_direct_upload_module_name');
 
         //set the vars
         $vars['bucket_name']    = $this->lib->bucket_name;
