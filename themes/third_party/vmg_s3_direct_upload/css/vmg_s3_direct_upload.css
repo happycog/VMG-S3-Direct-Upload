@@ -12,6 +12,11 @@
     transition:width 0.6 ease;
     width:0px;
 }
+
 .js-message{
     padding:5px 0;
+}
+
+.vmg-filename {
+    margin: 10px 0 5px 5px;
 }

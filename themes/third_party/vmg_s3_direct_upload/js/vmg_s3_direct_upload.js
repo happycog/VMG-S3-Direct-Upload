@@ -50,6 +50,7 @@
                         fileLocation = $(data).find('Location').text();
 
                     $('#' + fieldId).val(fileLocation);
+                    $('.vmg-filename a', $form).attr('href', $fileLocation).text($fileLocation);
                 },
                 done: function (event, data) {
                     $('.progress').fadeOut(300, function() {
