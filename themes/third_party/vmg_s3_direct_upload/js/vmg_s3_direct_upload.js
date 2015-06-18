@@ -9,6 +9,7 @@
                 url: $form.attr('action'),
                 type: 'POST',
                 autoUpload: true,
+                dataType: 'xml',
                 add: function (event, data) {
 
                     // Use XHR, fallback to iframe
@@ -44,7 +45,11 @@
                     );
                 },
                 success: function(data) {
-                    //
+                    var fieldId = $form.attr('data-field-id'),
+                        // Root->PostResponse->Location
+                        fileLocation = $(data).find('Location').text();
+
+                    $('#' + fieldId).val(fileLocation);
                 },
                 done: function (event, data) {
                     $('.progress').fadeOut(300, function() {
