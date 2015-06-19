@@ -43,9 +43,16 @@ class Vmg_s3_direct_upload_ft extends EE_Fieldtype
      */
     public function display_field($data)
     {
+
+        $fileExt = end(explode('.', $data));
+        $filetype = get_mime_by_extension($data);
+
         return $this->EE->load->view('index',array(
+            'field_id'      => $this->field_name,
             'field_name'    => $this->cell_name,
             'file'          => $data,
+            'fileExt'       => $fileExt,
+            'fileType'      => $filetype,
             'bucket_name'   => $this->lib->bucket_name,
             'access_key'    => $this->lib->access_key,
             'policy'        => $this->lib->policy_generator(),
@@ -83,6 +90,11 @@ class Vmg_s3_direct_upload_ft extends EE_Fieldtype
     function save_cell($data)
     {
         return $data;
+    }
+
+    public function save($value)
+    {
+        return $value;
     }
 
     /**
